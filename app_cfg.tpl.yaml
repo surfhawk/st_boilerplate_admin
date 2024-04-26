@@ -1,0 +1,21 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@your-admin.com
+      logged_in: false  # Will be managed automatically
+      name: Admin
+      password: 'password'  # Will be hashed automatically
+    user:
+      email: user@your-admin.com
+      logged_in: false  # Will be managed automatically
+      name: user
+      password: '1234'  # Will be hashed automatically
+
+cookie:
+  expiry_days: 5
+  key: abc_ck_key  # Must be string
+  name: abc_ck_nm  # Must be string
+
+preauthorized:
+  emails:
+  - melsby@gmail.com
