@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  streamlit_app:
+    container_name: st_app_admin  # Your docker container name
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - REPO_NAME=st_boilerplate_admin  # Your repository name
+        - APP_NAME=app_admin  # folder name of streamlit app in repo
+        - APP_HOST=0.0.0.0  # host of streamlit app
+        - APP_PORT=8501  # port of streamlit app
+    environment:
+      - TZ=Asia/Seoul
+      # You can specify runtime host and port here
+      # - APP_HOST=0.0.0.0
+      # - APP_PORT=22021
+    ports:
+      - "8501:8501"  # host:container
+    volumes:
+      - ./st_boilerplate_admin:/st_boilerplate_admin  # host source folder : container repo codehome
+      - ./opt:/root/opt
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    # command: sleep infinity
