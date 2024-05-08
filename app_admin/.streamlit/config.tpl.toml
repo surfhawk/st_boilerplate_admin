@@ -1,0 +1,10 @@
+# duplciated this file with renaming to config.toml
+
+[client]
+showErrorDetails = false
+
+[theme]
+# base =   # "dark" or "light"
+# primaryColor =   # theme color
+# backgroundColor =   # content area
+# secondaryBackgroundColor =   # sidebar
