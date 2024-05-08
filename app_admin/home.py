@@ -8,11 +8,11 @@ from st_pages import Page, Section, show_pages, hide_pages, add_page_title
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from initialize import app_cfg, init_session, render_require_login, render_authenticated
 
-# st.set_page_config(
-#     page_title="Streamlit Admin App",
-#     layout="wide",
-#     initial_sidebar_state="expanded",
-# )
+st.set_page_config(
+    page_title="App st_boilerplate_admin",
+    layout="centered",  # "wide"
+    initial_sidebar_state="collapsed",  # "expanded"
+)
 
 authenticator = st_auth.Authenticate(
     app_cfg['credentials'],
